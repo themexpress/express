@@ -127,6 +127,10 @@ body {
   @media (max-width: @screen-sm-max) {
     display: none;
   }
+
+  .page-template-template-full-width-php & {
+    display: none;
+  }
 }
 
 .sidebar-inner {
@@ -191,6 +195,10 @@ body {
     font-size: @font-size-small;
   }
 
+  .updated {
+    .sr-only;
+  }
+
   .entry-footer {
     margin: @line-height-computed 0 0;
     color: @gray-light;
@@ -200,7 +208,10 @@ body {
   .home &,
   .archive & {
     position: relative;
-    padding-left: @line-height-computed * 12;
+
+    &.has-thumbnail {
+      padding-left: @line-height-computed * 12;
+    }
 
     .entry-thumbnail {
       position: absolute;
@@ -226,6 +237,16 @@ body {
 
     .entry-footer {
       .sr-only;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      &.has-thumbnail {
+        padding-left: 0;
+      }
+
+      .entry-thumbnail {
+        position: relative;
+      }
     }
   }
 }

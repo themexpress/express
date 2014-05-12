@@ -1,6 +1,6 @@
 /*
 Theme Name: Express
-Theme URI: https://github.com/themexpress/express
+Theme URI: http://www.themexpress.net/express/
 Author: themexpress
 Author URI: http://www.themexpress.net/
 Description: Responsive News & Magazine Wordpress Theme
@@ -7134,6 +7134,9 @@ body {
     display: none;
   }
 }
+.page-template-template-full-width-php .content-inner:before {
+  display: none;
+}
 .sidebar-inner {
   padding-left: 40px;
 }
@@ -7188,6 +7191,16 @@ body {
   color: #999999;
   font-size: 12px;
 }
+.hentry .updated {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 .hentry .entry-footer {
   margin: 20px 0 0;
   color: #999999;
@@ -7196,6 +7209,9 @@ body {
 .home .hentry,
 .archive .hentry {
   position: relative;
+}
+.home .hentry.has-thumbnail,
+.archive .hentry.has-thumbnail {
   padding-left: 240px;
 }
 .home .hentry .entry-thumbnail,
@@ -7347,6 +7363,16 @@ fieldset[disabled] .archive .hentry .more-link.active {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+@media (max-width: 991px) {
+  .home .hentry.has-thumbnail,
+  .archive .hentry.has-thumbnail {
+    padding-left: 0;
+  }
+  .home .hentry .entry-thumbnail,
+  .archive .hentry .entry-thumbnail {
+    position: relative;
+  }
 }
 .post-navigation {
   border-top: 1px solid #eeeeee;
